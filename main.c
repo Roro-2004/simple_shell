@@ -7,13 +7,14 @@
  *
  * @argc: parameter that taken to be checked
  * @argv: parameter that taken to be checked
+ * @env: parameter that taken to be checked
  *
  * Return: 0 (Success) or status (Failure)
  */
 
 int main(int argc, char **argv, char **env)
 {
-	int stat = 0;
+	int stat = 0, i = 0;
 	char *written = NULL, **cmd = NULL;
 	(void)argc;
 
@@ -26,11 +27,13 @@ int main(int argc, char **argv, char **env)
 			_putchar2('\n');
 			return (stat);
 		}
+		i++;
 		cmd = token(written);
 		if (cmd == NULL)
 		continue;
-		stat = exe(cmd, argv, env);
+		stat = exe(cmd, argv, env, i);
 
 	}
 
 }
+

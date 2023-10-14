@@ -8,7 +8,7 @@
  * Return: a new string containing the double
  */
 
-char *_double(const char *str)
+char *_double(char *str)
 {
 	char *str2;
 	int i = 0, l = 0;
