@@ -22,5 +22,5 @@ int _strlen(char *s);
 char *_double(const char *str);
 char **token(char *written);
 void free_grid(char **grid);
-
+int exe(char **cmd, char **argv, char **env);
 #endif

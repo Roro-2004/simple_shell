@@ -11,12 +11,11 @@
  * Return: 0 (Success) or status (Failure)
  */
 
-int main(int argc, char **argv)
+int main(int argc, char **argv, char **env)
 {
+	int stat = 0;
 	char *written = NULL, **cmd = NULL;
 	(void)argc;
-	(void)argv;
-	
 
 	while (1)
 	{
@@ -25,13 +24,13 @@ int main(int argc, char **argv)
 		{
 			if (isatty(STDIN_FILENO))
 			_putchar2('\n');
-			return (0);
-			/*return(status); mo2ktn*/
+			return (stat);
 		}
 		cmd = token(written);
 		if (cmd == NULL)
 		continue;
-		free_grid(cmd);
+		stat = exe(cmd, argv, env);
+
 	}
 
 }
