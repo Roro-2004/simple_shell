@@ -7,5 +7,5 @@
 */
 int _putchar2(char s)
 {
-	return (write(1, &s, 1));
+	return (write(STDOUT_FILENO, &s, 1));
 }

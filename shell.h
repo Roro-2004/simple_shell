@@ -27,7 +27,14 @@ char *envr(char *var, char **env);
 char *pathh(char *cmd, char **env);
 void reverse_array(char *a, int n);
 void error(char *n, char *command, int index);
+int is_built(char *cmd);
 char *intstr(int num);
+void p_env(char **cmd, int *stat, char **env);
+void h_built(char **cmd, char **argv, char **env, int *stat, int idx);
+int _atoi(char *s);
+void exv(char **cmd, char **argv, int *stat, int idx);
+void error2(char *n, char *command, int index);
+int isp(char *cmd);
 
 #endif
 

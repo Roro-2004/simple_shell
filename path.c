@@ -5,6 +5,8 @@
  *
  * @cmd: parameter that taken to be checked
  *
+ * @envv: env var
+ *
  * Return: path of the command
  */
 

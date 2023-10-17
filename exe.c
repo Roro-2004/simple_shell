@@ -5,6 +5,7 @@
  * @cmd: path of comm
  * @argv: command
  * @env: env var
+ * @i: counter
  * Return: exits stat
 */
 int exe(char **cmd, char **argv, char **env, int i)

@@ -31,6 +31,9 @@ int main(int argc, char **argv, char **env)
 		cmd = token(written);
 		if (cmd == NULL)
 		continue;
+		if (is_built(cmd[0]))
+			h_built(cmd, argv, env, &stat, i);
+		else
 		stat = exe(cmd, argv, env, i);
 
 	}
